@@ -1,4 +1,5 @@
-# vs code config for vim mode
-line one 
-line two
-line three
+# VS config for Vim mode
+
+Some base config and setting for VSCode Vim mode
+
+
