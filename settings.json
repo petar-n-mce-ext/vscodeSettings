@@ -1,0 +1,201 @@
+{
+    "debug.toolBarLocation": "docked",
+    "editor.foldingMaximumRegions": 500,
+    "editor.formatOnPaste": false,
+    "editor.formatOnSave": false,
+    "editor.lineNumbers": "relative",
+    "editor.linkedEditing": true,
+    "editor.minimap.enabled": false,
+    "extensions.autoCheckUpdates": true,
+    "extensions.autoUpdate": true,
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "search.followSymlinks": false,
+    "update.showReleaseNotes": false,
+    "window.commandCenter": false,
+    "window.menuBarVisibility": "compact",
+    "workbench.activityBar.location": "hidden",
+    "workbench.iconTheme": "material-icon-theme",
+    "zenMode.hideLineNumbers": false,
+    "vim.leader": "<Space>",
+    "vim.hlsearch": true,
+    "vim.useSystemClipboard": true,
+    "vim.useCtrlKeys": true,
+    "vim.easymotion": true,
+    "vim.handleKeys": {
+        "<C-o>": true, // code navigate vim mode
+        "<C-i>": true, // code navigate vim mode
+        "<C-d>": true, // scroll down with vim
+        "<C-u>": true, // scroll up with vim
+        "<C-s>": false, // save file vscode style
+        "<C-p>": false, // open file
+        "<C-f>": false, // find in file 
+        "<C-b>": false, // open sidebar
+        "<C-j>": false, // open terminal
+    },
+    "vim.normalModeKeyBindingsNonRecursive": [
+        // NAVIGATION
+        // switch b/w buffers
+        {
+            "before": [ "<S-h>" ],
+            "commands": [ ":bprevious" ]
+        },
+        {
+            "before": [ "<S-l>" ],
+            "commands": [ ":bnext" ]
+        },
+        // splits
+        {
+            "before": [ "leader", "v" ],
+            "commands": [ ":vsplit" ]
+        },
+        {
+            "before": [ "leader", "s" ],
+            "commands": [ ":split" ]
+        },
+        // workbench visibility of pannels
+        {
+            "before": [ "leader", "e" ],
+            "commands": [ "workbench.action.toggleSidebarVisibility" ]
+        },
+        // panes
+        {
+            "before": [ "leader", "h" ],
+            "commands": [ "workbench.action.focusLeftGroup" ]
+        },
+        {
+            "before": [ "leader", "j" ],
+            "commands": [ "workbench.action.focusBelowGroup" ]
+        },
+        {
+            "before": [ "leader", "k" ],
+            "commands": [ "workbench.action.focusAboveGroup" ]
+        },
+        {
+            "before": [ "leader", "l" ],
+            "commands": [ "workbench.action.focusRightGroup" ]
+        },
+        // NICE TO HAVE
+        {
+            "before": [ "leader", "w" ],
+            "commands": [ ":w!" ]
+        },
+        {
+            "before": [ "leader", "q" ],
+            "commands": [ ":q!" ]
+        },
+        {
+            "before": [ "leader", "x" ],
+            "commands": [ ":x!" ]
+        },
+        {
+            "before": [ "[", "d" ],
+            "commands": [ "editor.action.marker.prev" ]
+        },
+        {
+            "before": [ "]", "d" ],
+            "commands": [
+                "editor.action.marker.next"
+            ]
+        },
+        {
+            "before": [ "<leader>", "c", "a" ],
+            "commands": [
+                "editor.action.quickFix"
+            ]
+        },
+        {
+            "before": [ "leader", "f" ],
+            "commands": [ "workbench.action.quickOpen" ]
+        },
+        {
+            "before": [ "leader", "p" ],
+            "commands": [ "editor.action.formatDocument" ]
+        },
+        {
+            "before": [ "g", "r" ],
+            "commands": [ "editor.action.goToReferences" ]
+        },
+        {
+            "before": [ "g", "h" ],
+            "commands": [ "editor.action.showDefinitionPreviewHover" ]
+        },
+        // Navigation in file
+        // Git information
+        {
+            "before": [ "leader", "g", "t" ],
+            "commands": [ "workbench.view.scm" ]
+        },
+        {
+            "before": [ "leader", "g", "l" ],
+            "commands": [ "editor.action.showDefinitionPreviewHover" ]
+        },
+        // Using marks as impaired ref: https://github.com/VSCodeVim/Vim/issues/6838
+        {
+            "before": [ "]", "]" ],
+            "after": [ "m", "`", "o", "<Esc>", "`", "`" ],
+        },
+        {
+            "before": [ "[", "[" ],
+            "after": [ "m", "`", "O", "<Esc>", "`", "`" ],
+        }
+    ],
+    "vim.visualModeKeyBindings": [
+        // Stay in visual mode while indenting
+        {
+            "before": [ "<" ],
+            "commands": [ "editor.action.outdentLines" ]
+        },
+        {
+            "before": [ ">" ],
+            "commands": [ "editor.action.indentLines" ]
+        },
+        // Move selected lines while staying in visual mode
+        {
+            "before": [ "J" ],
+            "commands": [ "editor.action.moveLinesDownAction" ]
+        },
+        {
+            "before": [ "K" ],
+            "commands": [ "editor.action.moveLinesUpAction" ]
+        },
+        // toggle comment selection
+        {
+            "before": [ "leader", "c" ],
+            "commands": [ "editor.action.commentLine" ]
+        }
+    ],
+    "[typescriptreact]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[jsonc]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "go.toolsManagement.autoUpdate": true,
+    "editor.unicodeHighlight.invisibleCharacters": false,
+    "editor.unicodeHighlight.ambiguousCharacters": false,
+    // try to improve performance
+    "files.exclude": {
+        "**/tmp/**": true,
+        "**/node_modules/**": true,
+        "**/.git/objects/**": true,
+    },
+    "files.watcherExclude": {
+        "**/.git/objects/**": true,
+        "**/.git/subtree-cache/**": true,
+        "**/node_modules/**": true,
+        "**/tmp/**": true,
+        "**/dist/**": true
+    },
+    "search.exclude": {
+        "**/node_modules/**": true,
+        "**/dist/**": true,
+        "**/tmp/**": true,
+        "**/.git/objects/**": true,
+        "**/.git/subtree-cache/**": true,
+        "**/coverage/**": true
+    },
+    "workbench.colorTheme": "Night Owl"
+}
